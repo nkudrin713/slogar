@@ -1,23 +1,21 @@
 package dev.nkudrin.slogar.internal
 
-internal object RussianLetters {
-    private val vowels = setOf('а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я')
-    private val consonants = setOf(
-        'б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н',
-        'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ',
-    )
-    private val signs = setOf('ь', 'ъ')
+private val russianVowels = setOf('а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я')
+private val russianConsonants = setOf(
+    'б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н',
+    'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ',
+)
+private val russianSigns = setOf('ь', 'ъ')
 
-    fun isVowel(char: Char): Boolean = char.lowercaseChar() in vowels
+internal fun Char.isRussianVowel(): Boolean = lowercaseChar() in russianVowels
 
-    fun isConsonant(char: Char): Boolean = char.lowercaseChar() in consonants
+internal fun Char.isRussianConsonant(): Boolean = lowercaseChar() in russianConsonants
 
-    fun isShortI(char: Char): Boolean = char.lowercaseChar() == 'й'
+internal fun Char.isRussianShortI(): Boolean = lowercaseChar() == 'й'
 
-    fun isSign(char: Char): Boolean = char.lowercaseChar() in signs
+internal fun Char.isRussianSign(): Boolean = lowercaseChar() in russianSigns
 
-    fun isRussianLetter(char: Char): Boolean {
-        val lower = char.lowercaseChar()
-        return lower in vowels || lower in consonants || lower in signs
-    }
+internal fun Char.isRussianLetter(): Boolean {
+    val lower = lowercaseChar()
+    return lower in russianVowels || lower in russianConsonants || lower in russianSigns
 }

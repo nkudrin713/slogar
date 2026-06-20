@@ -7,5 +7,5 @@ class Slogar(
 ) {
     private val syllabifier = RussianSyllabifier(options)
 
-    fun split(word: String): SyllabificationResult = syllabifier.split(word)
+    fun split(word: String): Syllables = syllabifier.split(word)
 }

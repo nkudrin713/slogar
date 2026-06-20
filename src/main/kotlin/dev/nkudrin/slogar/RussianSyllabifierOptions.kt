@@ -1,7 +1,7 @@
 package dev.nkudrin.slogar
 
 data class RussianSyllabifierOptions(
-    val policy: SyllablePolicy = SyllablePolicy.SchoolPhonetic,
+    val policy: SyllablePolicy = SyllablePolicy.SchoolSimple,
     val normalizeYo: Boolean = false,
     val strict: Boolean = false,
 )

@@ -4,4 +4,5 @@ enum class SyllabificationWarning {
     BlankInput,
     NoVowels,
     NonRussianLetters,
+    UnresolvedBoundary,
 }
