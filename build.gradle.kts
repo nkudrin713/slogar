@@ -15,11 +15,6 @@ kotlin {
     jvmToolchain(17)
 }
 
-java {
-    withSourcesJar()
-    withJavadocJar()
-}
-
 dependencies {
     testImplementation(kotlin("test"))
 }
