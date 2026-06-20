@@ -1,20 +1,9 @@
 # slogar
 
-Kotlin library for deterministic school-style syllabification of Russian words.
+Kotlin library for syllabification of Russian words.
 
-`slogar` works with written words and does not implement phonetic transcription or line-breaking
-rules. It preserves the original casing in the returned syllables.
-
-## Status
-
-The library is under development and has not been published yet. The current project version is
-`0.1.0-SNAPSHOT`.
-
-Build and run the tests locally:
-
-```shell
-./gradlew build
-```
+The current `SchoolSimple` policy works with written words and does not implement phonetic
+transcription or line-breaking rules. `slogar` preserves the original casing in returned syllables.
 
 ## Usage
 
@@ -73,3 +62,7 @@ In the default non-strict mode:
 
 Warnings are returned through `Syllables.warnings`. Strict mode turns these invalid-input cases
 into `IllegalArgumentException`.
+
+## License
+
+Licensed under the [Apache License 2.0](LICENSE).
