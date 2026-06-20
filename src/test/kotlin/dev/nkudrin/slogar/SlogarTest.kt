@@ -80,7 +80,8 @@ class SlogarTest {
 
     @Test
     fun `throws exception when input is invalid in strict mode`() {
-        val strictSlogar = Slogar(RussianSyllabifierOptions(strict = true))
+        val strictSlogar = Slogar.strict(true)
+            .build()
         val invalidWords = listOf("   ", "ммм", "ма-ма", "мама1", "два слова", "test")
 
         invalidWords.forEach { word ->
