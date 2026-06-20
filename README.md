@@ -5,6 +5,14 @@ Kotlin library for syllabification of Russian words.
 The current `SchoolSimple` policy works with written words and does not implement phonetic
 transcription or line-breaking rules. `slogar` preserves the original casing in returned syllables.
 
+## Installation
+
+```kotlin
+dependencies {
+    implementation("dev.nkudrin:slogar:0.1.0")
+}
+```
+
 ## Usage
 
 Use the default configuration:
